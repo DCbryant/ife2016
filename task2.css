@@ -1,0 +1,155 @@
+/*public*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Microsoft YaHei';
+    background-color: rgb(221, 221, 221);
+}
+article{
+    margin: 30px;
+    background-color: #fff;
+    padding: 60px 30px;
+}
+h2,h3{
+    margin-bottom: 20px;
+}
+span{
+    display: block;
+    margin-bottom:20px;
+}
+p{
+    text-indent: 40px;
+}
+/*header*/
+header{
+    height: 70px;
+    background-color: rgb(51, 51, 51);
+}
+ header img{
+    height: 40px;
+    margin: 15px 30px;
+}
+
+nav ul{
+    float: right;
+}
+nav li {
+    float: left;
+    line-height: 70px;
+    text-align: center;
+    margin-right: 20px;
+}
+nav li a{
+    text-decoration: none;
+    color:#fff; 
+}
+
+/*first*/
+/*sec*/
+.sec,.third ul{
+    list-style: none;
+}
+.secm,.third li{
+    margin: 20px;
+}
+/*third*/
+.third li{
+    display: table;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+.third li p{
+    text-indent: 0;
+    padding-bottom: 10px;
+}
+.third img{
+    width: 120px;
+    height: 100px;
+}
+
+/*last*/
+.last li{
+    margin-left: 40px;
+}
+.last p{
+    text-indent: 0;
+    margin-top: 20px;    
+}
+
+table{
+    border: 1px solid #cecece; 
+    border-collapse:collapse;
+    /*为表格设置合并边框模型：*/
+}
+table th{
+    width: 500px;
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+}
+tfoot{
+    background-color: rgb(204,204, 204);
+}
+td{
+    padding-left: 5px;
+}
+thead,tbody td{
+    border: 1px solid rgb(133, 133, 133);
+}
+tfoot td:last-child{
+    text-align: center;
+}
+
+
+/*aside*/
+aside{
+    margin: 60px 30px 20px;
+    background-color: #fff;
+    padding: 10px 30px;
+
+}
+
+aside form{
+    padding-left: 100px;
+    line-height: 40px;
+}  
+aside form table tr td{
+  border: none;
+}
+
+aside form table {
+  margin: 0 auto;
+}
+
+aside form tr td:nth-child(1) {
+  text-align: right;
+  vertical-align: text-top;
+}
+
+/* 单选和多选按钮垂直居中 */
+input[type="radio"], input[type="checkbox"]{
+  vertical-align:middle;
+}
+
+input[type="button"] {
+  width: 100%;
+  margin: 5px auto;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #3355d0;
+  border: none;
+  color: white;
+}
+/*footer*/
+footer{
+    height: 150px;
+    background: #000;
+    color: #fff;
+}
+footer span{
+    text-align: center;
+    padding-top: 60px;  
+}
