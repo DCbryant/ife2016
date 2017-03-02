@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            margin: 0;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        #container{
+            background: #eee;
+            height: 670px;
+            max-height: 670px;
+            margin: 20px;
+            position: relative;
+            padding: 20px;
+        }
+        div:not([id="container"]){
+            background: #fff;
+            margin: 20px;
+        }
+        #left,#right{
+            position: absolute;
+            top: 0;
+            padding: 20px;    
+        }
+        /*div{
+            margin: 20px;
+        }*/
+        #left{
+            left: 0;
+            width: 200px;
+            border: 1px solid orange;
+        }
+        #left img {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #999;
+            background-color:#999;
+        }
+        #left figcaption{
+            float: right;
+        }
+        #right{
+            right:0;
+            border: 1px solid red;
+            width: 120px;
+        }
+        #right img{
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #999;
+            background: #999;
+        }
+        #right figcaption{
+            float: left;
+        }
+        #main{
+            margin: 0 180px 0 260px;
+            border: 1px solid blue;    
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <figure>
+                <figcaption>乐观</figcaption>
+                <img src="baby.jpg" alt="海绵宝宝">
+            </figure>
+        </div>
+        <div id="main">
+            <p>尝试 position 和 float 的效果，思考它们的异同和应用场景。
+                注意测试不同情况，尤其是极端情况下的效果。
+                图片和文字内容请自行替换，尽可能体现团队的特色。
+                调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
+                改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
+                其他效果图中给出的标识均被正确地实现。
+            </p>
+        </div>
+        <div id="right">
+            <figure>
+                <figcaption>乐观</figcaption>
+                <img src="baby.jpg" alt="海绵宝宝">
+                <figcaption>乐观</figcaption>
+                <img src="baby.jpg" alt="海绵宝宝">
+                <figcaption>乐观</figcaption>
+                <img src="baby.jpg" alt="海绵宝宝">
+                <figcaption>乐观</figcaption>
+                <img src="baby.jpg" alt="海绵宝宝">
+            </figure>
+        </div>
+    </div>
+    <!--原理：左右绝对定位在左右位置，设置定宽，脱离文档流，main部分就会流出来，中间部分设置margin留出左右部分的宽度，既可以使中间自适应-->
+    <!--优点：div顺序可以随便改变-->
+    <!--缺点：若页面还有其他内容，top需要随时改变，另外，随着浏览器窗口缩小，小于200px的时候，会发生压缩-->
+</body>
+</html>
