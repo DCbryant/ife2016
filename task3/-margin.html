@@ -3,90 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        html,body{
-            margin: 0;
-            height: 100%;
+        body{padding:0;margin:0}
+        .header,.footer{width:100%;  background: #666;height:30px;clear:both;}
+        .bd{
+            padding-left:150px;
+            padding-right:190px;
         }
-        #container{
-            /*width: 100%;*/
-            margin: 20px;
-            /*padding: 20px;*/
-            border: 1px solid #999;
-            background: #eee;
-            height: 670px;
-            max-height: 670px;
-        }
-         div:not([id="container"]){
-            background: #fff;
-            margin: 20px;
-        }
-        img{
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            border: 1px solid #999;
-            background: #999;
-        }
-        #main{
-           
-            float: left;
-        }
-        #main #body{
-            margin: 0 100px 0 260px;
-            border: 1px solid yellow;
+        .left{
+            background: #E79F6D;
+            width:150px;
+            float:left;
+            margin-left:-100%;
+            position: relative;
+            left:-150px;
             
         }
-        #left{
-            width: 200px;
-            float: left;
-            border: 1px solid red;
+        .main{
+            background: #D6D6D6;
+            width:100%;
+            float:left;
+
         }
-        #right{
-            width: 120px;
-            float: left;
-            border: 1px solid aqua;
-        }
-        #left{
-            margin-left: -100%;
-        }
-        #right{
-            margin-left:-160px;
+        .right{
+            background: #77BBDD;
+            width:190px;
+            float:left;
+            margin-left:-190px;
+            position:relative;
+            right:-190px;
         }
     </style>
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
-        <div id="main">
-            <div id="body">
-                <p>尝试 position 和 float 的效果，思考它们的异同和应用场景。
-                    注意测试不同情况，尤其是极端情况下的效果。
-                    图片和文字内容请自行替换，尽可能体现团队的特色。
-                    调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
-                    改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
-                    其他效果图中给出的标识均被正确地实现。
-                </p>
-            </div>
-        </div>
-        <div id="left">
-            <figure>
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-            </figure>
-        </div>
-        <div id="right">
-            <figure>
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-            </figure>
+    <div class="header">Header</div>
+    <div class="bd">
+        <div class="main">Main</div>
+        <div class="left">Left</div>
+        <div class="right">Right
         </div>
     </div>
+    <div class="footer">Footer</div>
     
     <!--圣杯布局：三者都浮动，main填满，所以把left挤到最左边，然后利用margin把位置还给左边-->
     <!--优点：三栏相互关联，有一定的抗性-->

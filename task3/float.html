@@ -5,16 +5,23 @@
     <style>
         html,body{
             margin: 0;
-            height: 100%;
         }
         #container{
-            /*width: 100%;*/
             margin: 20px;
-            /*padding: 20px;*/
             border: 1px solid #999;
             background: #eee;
             height: 670px;
-            max-height: 670px;
+            min-height: 670px;
+            min-width: 600px;
+        }
+        #container:before{
+            content: "";
+            display: table;
+        }
+        #container:after{
+            content: "";
+            display: table;
+            clear:both;
         }
         div:not([id="container"]){
             background: #fff;
@@ -28,7 +35,7 @@
             background: #999;
         }
         #main{
-            margin: 20px 160px 0 240px;
+            margin: 20px 162px 0 242px;
             border: 1px solid red;
         }    
         #left{
@@ -38,43 +45,49 @@
         #right{
             width: 120px;
             border: 1px solid blue;
-            position: relative;
         }
         #right img{
-            float: none;
-            display: block;
+            display: inline-block;
         }
         #left{
             float: left;
         }
-        #left figcaption{
-            float: right;
-        }
         #right{
             float: right;
         }
+
+        #left img,#right img {
+            display: inline-block;
+            margin: 20px;  
+        }
+
+        /*清除浮动*/
+        .clearfix { 
+            *zoom: 1; 
+            } 
+        .clearfix:before, 
+        .clearfix:after { 
+            display: table; 
+            line-height: 0; 
+            content: ""; 
+        } 
+        .clearfix:after { 
+            clear: both; 
+        } 
     </style>
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="clearfix">
         <div id="left">
-            <figure>
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-            </figure>
+            <img src="child.jpg" alt="child">
+            <!--<span>dcbryant</span>    -->
         </div>
         <div id="right">
-            <figure>
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-                <figcaption>乐观</figcaption>
-                <img src="baby.jpg" alt="海绵宝宝">
-            </figure>
+           <img src="child.jpg" alt="child">
+           <img src="child.jpg" alt="child">
+           <img src="child.jpg" alt="child">
+           <img src="child.jpg" alt="child">
         </div>
         <div id="main">
             <p>尝试 position 和 float 的效果，思考它们的异同和应用场景。
