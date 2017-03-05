@@ -1,0 +1,311 @@
+/*reset*/
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 980px;
+    height: 1386px;
+    border:1px solid red; 
+    margin: 0 auto;
+    /*整块部分水平居中，block元素水平居中*/
+}
+/*public*/
+ul{list-style: none;}
+a{text-decoration: none;color: #000;}
+/*清除浮动*/
+.clearfix { 
+    *zoom: 1; 
+} 
+.clearfix:before, 
+.clearfix:after { 
+    display: table; 
+    line-height: 0; 
+    content: ""; 
+}
+.clearfix:after { 
+    clear: both; 
+} 
+
+/*header start*/
+header{
+    width: 892px;
+    height: 61px;
+    border-bottom: 2px solid #938e8c;
+    margin: 0 auto;
+    /*border: 1px solid blue;*/
+    /*解决谷歌下的inline-block带来的影响*/
+    font-size: 0;
+    -webkit-text-size-adjust:none;
+    position: relative;
+    
+}
+header div{
+    display: inline-block;
+    width: 110px;
+    height: 61px;
+    background-color: rgb(213, 93, 92);
+}
+header div>span{
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+header > p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: #d45d5c;
+}
+/*header end*/
+
+/*main start*/
+main{
+    width: 892px;
+    margin:50px auto;
+    border: 1px solid chartreuse;
+}
+/*过滤图片*/
+.main-top img{
+   
+}
+.main-top>div{
+    border-top:2px solid #cc8091;
+    float: right;
+    width: 212px;
+    height: 301px;
+    /*margin-left: 45px;*/
+}
+.main-top>div>p:nth-child(-n+2){
+    text-decoration: underline;
+    font-size: 24px;
+    color: #000;
+    /*小型大写字母*/
+    font-variant:small-caps;
+    margin: 10px 0 0 0;
+}
+.main-top>div p:nth-child(3),.main-top>div p:nth-child(4){
+    font-size: 12px;
+    color: #676767;
+    font-family: "STKaiti ";
+    margin: 5px 0 0 0;
+}
+.main-top>div p:nth-child(5){
+    font-size: 116px;
+    color: #75b86b;
+    font-style: italic;
+    /*字体倾斜*/
+    margin: 5px 0 0 0;
+}
+.main-top .side{
+    position: relative;
+    background-color: aqua;
+}
+.main-top .side p:nth-child(1){
+    position: absolute;
+    left: 20px;
+    top: -60px;
+    font-size: 55px;
+    color: #cc8091;
+}
+.main-top .side p:nth-child(2){
+    position: absolute;
+    left: 110px;
+    top: -10px;
+    font-size:21px;
+    color: #cc8091;
+}
+.main-top .side p:nth-child(3){
+    position: absolute;
+    left: 110px;
+    top: 25px;
+    font-size: 12px;
+    color: #cc8091;
+}
+
+/*main-top end*/
+
+/*main-middle start*/
+.main-middle{
+    width: 700px;
+    font: 0;
+}
+.main-middle>div{
+    float: left;
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.what {
+    width: 230px;
+}
+.what h3{
+    border-bottom: 2px dotted #75b86b;
+    color: #75b86b;
+}
+.when{
+    width: 208px;
+}
+.when h3{
+    border-bottom: 2px dotted #d2994f;
+    color: #d2944f;
+}
+.how{
+    width: 144px;
+}
+.how h3{
+    border-bottom: 2px dotted #cc7680;
+    color: #cc7680;
+}
+.how p span{
+    font-size: 12px;
+    color: #cd4a48;
+    font-style: italic;
+    margin: 17px 0;
+    opacity: 0.7;
+}
+.main-middle>div h3{
+    font-weight: bold; 
+    /*包裹性，不然下划线太长了*/
+    /*下划线要有颜色变化，所以不用text-decoration*/
+    display: table;
+}
+/*main-middle end*/
+
+/*main-bottom start*/
+
+.main-bottom-left{
+    width: 408px;
+}
+.main-bottom-left>p:nth-child(-n+2){
+    font-size: 38px;
+    color: #11456b;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.main-bottom-left p span{
+    font-size: 66px;
+    color: #f5e327;
+    font-weight: bold;
+    font-style: italic;
+    margin:0 10px 0 -10px;
+}
+.main-bottom-left p:nth-child(3){
+    font-size: 33px;
+    color: #11456b;
+    font-weight: bold;
+    border-bottom: 2px solid #11456b;
+    padding-bottom: 10px;
+}
+.main-bottom-left article{
+    margin-top: -20px;
+    font-size: 12px;
+    color: #767777;
+    font-family: "SimSun";
+}
+.main-bottom-left article p span{
+    float: left;
+    font-size: 70px;
+    color: #f5e327;
+    margin-top: -15px;
+    font-style: normal;
+    margin-right: 5px;
+}
+.main-bottom-left img{
+    float: right;
+}
+
+/*main-bottom-right start*/
+
+.main-bottom-right img{
+    float: right;
+    margin-top:-694px;
+}
+.bottom-right-img{
+    position: relative;
+}
+.bottom-right-img>p{
+    position: absolute;
+    top: -500px;
+    left: 500px;
+    
+    color: #72b162;
+    font-size: 16px;
+}
+.bottom-right-img>p span{
+    font-size: 26px;
+    color: #fff;
+}
+
+.main-bottom-right-inf{
+    background: rgb(238, 238, 214);
+    float: right;
+    width: 458px;
+    height:380px;
+    position: absolute;
+    left: 620px;
+    top:980px;
+    
+}
+.main-bottom-right-inf>p{
+    text-align: center;
+    background: url(4.png) no-repeat;
+    background-position: 5% 80%;
+    /*padding-left: -50px;*/
+    margin-left: 60px;
+    margin-top: 30px;
+}
+.main-bottom-right-inf-leftside{
+    background-color: rgb(232,93,91);
+    width: 250px;
+    height: 210px;
+    position: absolute;
+    left:0;
+    top:200;
+}
+.main-bottom-right-inf-leftside p:nth-child(1){
+    font-size:110px;
+    color:white;
+    position:relative;
+    left:10px;
+    top:-60px;
+}
+.main-bottom-right-inf-leftside p:nth-child(2){
+    font-size:80px;
+    color:white;
+    position:relative;
+    left:50px;
+    top:-60px;
+}
+.main-bottom-right-inf-rightside{
+    float: right;
+    position: absolute;
+    left: 250px;
+    top: 168px;
+    width: 160px;
+    height: 210px;
+    margin: 0 20px;
+}
+.main-bottom-right-inf-rightside p span{
+    font-size:50px;
+    color:rgb(213,93,95);
+}
+
+/*footer*/
+footer{
+    width:892px;
+    border-top:2px solid gray;
+    margin:50px auto;
+}
+footer>div{
+    float:right；
+    color:rgb(224,114,114);
+}
+
