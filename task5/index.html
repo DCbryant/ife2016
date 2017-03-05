@@ -22,7 +22,7 @@
             <!--表单对齐-->
             <h3>这里是侧栏</h3>
             <form action="">
-                <p style="overflow: hidden">
+                <p>
                     <label for="email">请输入一个邮箱</label>
                     <input type="text" id="email">
                 </p>
@@ -34,11 +34,11 @@
                 <p>
                     <label for="repwd">请输入一个邮箱</label>
                     <input type="password" id="repwd">
-                    <p>密码为6-16为数字或英文</p>
                 </p>
-                <p>
+                <p>密码为6-16为数字或英文</p>
+                <p style="overflow: hidden">
                     <label>性别</label>
-                    <input type="radio">男
+                    <input type="radio" checked>男
                     <input type="radio">女
                 </p>
                 <p>
@@ -56,8 +56,8 @@
                     <input type="checkbox">艺术
                 </p>
                 <p>
-                    <label>个人描述te</label>
-                    <textarea rows="2" cols="50"></textarea>
+                    <label>个人描述</label>
+                    <textarea rows="2" cols="50" style="width: 170px"></textarea>
                 </p>
                 <input type="submit">
             </form>
