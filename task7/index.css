@@ -1,0 +1,472 @@
+/*public*/
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix { 
+    *zoom: 1; 
+} 
+.clearfix:before, 
+.clearfix:after { 
+    display: table; 
+    line-height: 0; 
+    content: ""; 
+}
+.clearfix:after { 
+    clear: both; 
+} 
+ul{list-style: none;}
+a{text-decoration: none;display: inline-block;}
+
+/*common*/
+body{
+    width: 1280px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 1280px;
+}
+
+/*header*/
+header{
+    height: 60px;
+}
+header .logo{
+    background: url("img/logo.png") no-repeat;
+    margin: 15px 5px 15px 55px;
+    font-size: 26px;
+}
+header .logo>a{
+    height: 36px;
+    width: 80px;
+    padding-left: 40px;
+}
+
+header nav ul .item{
+    float: left;
+    margin-left: 40px;
+    color: #787b83;
+    font-family: "微软雅黑";
+}
+header nav ul li:nth-child(1){
+    border-bottom: 5px solid #e74f4d;
+    padding: 0 10px 15px 10px;
+   
+}
+header nav ul li:nth-child(1) a{
+     color: #e74f4d;
+     cursor: pointer;
+}
+header nav ul li:nth-child(1):hover{
+    background: palegreen; 
+}
+header nav ul .item-login{
+    margin: 0 60px 0 45px;
+    background: url("img/login.png") no-repeat;
+    background-position: 0 2px;
+}
+header nav ul .item-login a{
+    text-indent: 1.5em;
+    color: #e74f4d;
+}
+
+/*main*/
+/*banner*/
+main .banner{
+    background: url("img/banner.png") no-repeat;
+    width: 1280px;
+    height: 692px;
+}
+.text{
+    padding-left: 126px;
+    padding-top: 166px;
+    color: #fff;
+}
+.text p:nth-child(1){
+    font-size: 60px;   
+}
+.text p:nth-child(2){
+    font-size: 20px;
+    margin-top: -56px;
+}
+.text p:nth-child(3){
+    font-size: 20px;
+    margin-top: -10px;
+}
+.text p:nth-child(4){
+    width: 328px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #e74f4d;
+}
+
+/*banner-list*/
+.banner-list img{
+    margin: 50px 140px 50px 139px;
+}
+.banner-list .list{
+    width: 319px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+.banner-list .list:not(:last-child)::after{
+    content: "";
+    border-right: 1px solid #000;
+    height: 50px;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+/*ask*/
+.ask{
+    width: 100%;
+    height: 360px;
+    text-align: center;
+    background-color: #edecec;
+}
+.ask img{
+    margin-top: 90px;
+}
+.ask p{
+    color: #a1a1a1;;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+/*activity*/
+.activity{
+    height: 342px;
+    width: 1280px;
+    background: url("img/map.png") ;
+    float: left;
+    /*不知道哪来的空格*/
+    text-align: center;
+    color: #fff;
+}
+.activity>p:nth-child(1){
+    margin-top: 50px;
+    font-size: 20px;
+}
+.activity>p:nth-child(2){
+    font-size: 26px;
+    margin-top: -30px;
+}
+.activity>p:nth-child(3){
+    font-size: 12px;
+    margin-top: -30px;
+}
+.activity>.city{
+    margin: 50px 120px 0 120px;
+    position: relative;
+}
+.activity>.city input[type = "text"]{
+    width: 220px;
+    height: 24px;
+    margin-left: 30px;
+    text-indent: 10px;
+    background: url("img/little-icon.png") no-repeat;
+    background-position: 98% 80%;
+    background-color: #fff;
+}
+.activity>.city input[type = "button"]{
+    width: 230px;
+    height: 30px;
+    border: 0;
+    background-color: #bf4f49;
+    margin-left: 25px;
+    color: #fff;
+}
+.city .city-list{
+    width: 222px;
+    height: 170px;
+    font-size: 14px;
+    line-height: 0.8;
+    background-color: #e4e3e5;
+    color: #000;
+    position: absolute;
+    left: 295px;
+    top: 30px;
+    text-align: left;
+    text-indent: 30px;
+    padding-top: -40px; 
+}
+/*.city .city-list p:first-child{
+    background: url("img/little-icon.png") no-repeat;
+    background-position: 0 -10px;
+    padding-top: -50px;
+    height: 20px;
+    图标未处理
+}*/
+
+/*show*/
+.activity-example{
+    width: 1280px;
+    height: 1000px;
+    background-color: #f7f7f7;
+}
+.activity-example .show{
+    float: left;
+    width: 220px;
+    margin-top: 100px;
+    margin-right: 40px;
+    height: 340px;
+    text-align: center;
+}
+.activity-example .show p:nth-child(2){
+    color: #bdbdbd;
+    font-size: 12px;
+    margin-top: -10px;
+}
+.activity-example .show:nth-child(1){
+    margin-left: 140px;
+}
+.activity-example .show:nth-child(2) p:nth-child(1){
+    letter-spacing: 26px;
+    font-size: 24px;
+    margin-top: -12px;
+    margin-left: 20px;
+}
+.activity-example .show:nth-child(4){
+    margin-right: 140px;
+}
+
+/*new-world*/
+.new-world{
+    width: 1280px;
+    height: 566px;
+    background: url("img/young.png") no-repeat;
+    /*font:0;*/
+    /*为什么还是有个间距。。,又莫名的消失了*/
+    color: #fff;
+}
+.world-text{
+    text-align: center;
+    width: 460px;
+    height: 350px;
+    margin: 108px 195px 0 195px;
+    display: inline-block;
+}
+.world-text p:nth-child(1){
+    font-size: 36px;
+}
+.world-text p:nth-child(2){
+    font-size: 80px;
+    margin-top: -50px;
+}
+.world-text p:nth-child(3),.world-text p:nth-child(4){
+    font-size: 20px;
+    margin-top: -70px;
+}
+.world-text p:nth-child(4){
+    margin-top: 0px;
+}
+
+.world-description{
+    background: #fff;
+    color: #000;
+    height: 566px;
+    width: 430px;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 16px;
+}
+.world-description p:nth-child(1){
+    font-size: 18px;
+}
+.world-description p:nth-child(1)>span{
+    color: #e74f4d;
+}
+.world-description p:nth-child(2),.world-description p:nth-child(3),.world-description p:nth-child(4){
+    font-size: 12px;
+    color: lightslategrey;
+}
+.world-description p:nth-child(5){
+    border: 1px solid #e74f4d;
+    width: 106px;
+    height: 32px;
+    margin: 0 162px;
+    padding-top: 8px;
+}
+.world-description .dot{
+    position: relative;
+}
+/*还需写三个点*/
+
+.find-more{
+    width: 1280px;
+    height: 521px;
+    text-align: center;
+    font-size: 18px;
+}
+.more:nth-child(1){
+    background: #e74f4d;
+    width: 425px;
+    height: 521px;
+    color: #fff;
+}
+.more:nth-child(1)>p:nth-child(1),.more:nth-child(2)>p:nth-child(1){
+    margin-top: 160px;
+}
+.more:nth-child(1)>p:nth-child(3),.more:nth-child(2)>p:nth-child(3){
+    font-size: 30px;
+    margin-top: -20px;
+}
+.more:nth-child(1)>p:nth-child(4){
+    border: 1px solid #fff;
+    width: 181px;
+    height: 44px;
+    margin:-40px 122px 0 122px;
+    padding-top: 16px;
+}
+.more:nth-child(2)>p:nth-child(4){
+    border: 1px solid #e74f4d;
+     width: 181px;
+    height: 44px;
+    margin:-40px 122px 0 122px;
+    padding-top: 16px;
+}
+.more:nth-child(2){
+    background: #fff;
+    width: 425px;
+    height: 521px;
+    color: #000;
+}
+.find-more img{
+    margin-top: -80px;
+}
+
+/*join-us*/
+.join-us{
+    width: 1280px;
+    height: 750px;
+    border: 1px solid red;
+}
+.join-us .volunteer{
+    margin: 120px 0;
+    text-align: center;
+}
+.volunteer p:nth-child(1){
+    font-size: 20px;
+}
+.volunteer p:nth-child(2){
+    font-size: 30px;
+    color: red;
+    margin-top: -30px;
+}
+.volunteer p:nth-child(3){
+    font-size: 14px;
+    margin-top: -30px;
+    color: #cfcfcf;
+}
+.volunteer p:nth-child(4){
+    font-size: 14px;
+    color: #cfcfcf;
+}
+
+/*.agreenment*/
+
+.term{
+    font-size: 16px;
+    margin-left: 130px;
+    margin-right: 76px;
+    margin-top: -20px;
+}
+.term h3{
+    margin-top: 32px;
+}
+.term >p{
+    font-size: 14px;
+    color: #e4e3e5;
+}
+
+.apply input[type="text"]{
+    width: 310px;
+    height: 40px;
+    margin-right: 16px;
+    margin-bottom: 18px;
+    background-color: #ececee;
+    text-indent: 2em;
+}
+.apply textarea{
+    width: 644px; 
+    background-color: #ececee;
+    text-indent: 2em;
+}
+.apply input[type="submit"]{
+    width: 644px;
+    height: 40px;
+    background-color: #ececee;
+    text-align: center;
+}
+
+/*main end*/
+
+/*footer*/
+footer {
+    width: 1280px;
+    height: 416px;
+    background-color: #33363f;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+footer p:nth-child(1){
+    font-size: 18px;
+    padding-top: 110px;
+}
+footer p:nth-child(2),footer p:nth-child(3){
+    font-size: 14px;
+    margin-top: -10px;
+}
+.submit{
+    margin-top: 30px;
+}
+.submit input[type="text"]{
+    width: 430px;
+    height: 40px;
+    background-color: #fff;
+}
+.submit input[type="button"]{
+    height: 46px;
+    width: 80px;
+    background: #6f7278;
+    border: 0;
+    font-size: 18px;
+    color: #fff;
+}
+.small-icon{
+    margin-top: 30px;
+}
+.to-top{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #2f3038;
+    height: 54px;
+    width: 1280px;
+    
+}
+.to-top a{
+    color: #fff;
+    line-height: 60px;
+    font-size: 12px;
+}
+.to-top a:nth-child(1){
+    position: absolute;
+    left: 100px;
+}
+.to-top a:nth-child(2){
+    position: absolute;
+    right: 40px;
+}
