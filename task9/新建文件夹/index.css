@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfit::before,
+.clearfit::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body{
+    margin: 0 auto;
+    width: 1280px;
+}
+
+header{
+    background-color: #228abf;
+    width: 1280px;
+    height: 56px;
+    
+}
+.header-logo{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+header nav{
+    margin-right: 90px;
+    margin-top: 14px;
+    position: relative;
+}
+header nav input{
+    width: 313px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 14px;
+    /*直接用背景图会覆盖input的颜色*/
+}
+/*定位搜索框，迫不得已又用了定位*/
+header nav>img{
+    position: absolute;
+    left: 20px;
+    top: 7px;
+}    
+header nav a{
+    color: #fff;
+    vertical-align: -2px;
+    font-size: 12px;
+    margin-left: 20px;
+}
+header nav a img{
+    padding-right: 5px;
+    vertical-align: -3px;
+}
+
+
+/*main*/
+/*aside*/
+.main-left{
+    width: 260px;
+    height: 1210px;
+    background-color: #2a2e3d;
+}
+.self-info{
+    width: 260px;
+    height: 150px;
+    font-size: 16px;
+    color: #fff;
+}
+.avatar{
+    margin-top: 18px;
+    margin-left: 45px;
+}
+.avatar>span{
+    vertical-align: 18px;
+    margin-left: 1em;
+}
+.col{
+    margin: 30px 50px 20px 50px;
+}
+.col div p:nth-of-type(2){
+    font-size: 12px;
+}
+
+
+.main-right{
+    height: 1210px;
+    background-color: #eeedec;
+}
+.main-right nav {
+    width: 1021px;
+    height: 31px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #000;
+}
+.main-right nav .item{
+    float: left;
+}
