@@ -38,7 +38,7 @@ var aqiData = [
         .sort(function(a,b){return b[1] - a[1];})
         // <li>第一名：福州（样例），10</li>
         .forEach(function(item,index){
-            str += '<li>第' + chineseNumbers[index] +'名：' + item[0] + item[1] + '</li>';
+            str += '<li>第' + chineseNumbers[index] +'名：' + item[0] + ',' + item[1] + '</li>';
         })
         document.getElementById('aqi-list').innerHTML = str;
 
