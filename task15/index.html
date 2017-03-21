@@ -35,7 +35,7 @@
  * 返回一个数组，格式见函数中示例
  */
  var $ = function(id){return document.getElementById(id);}
- var chineseNumbers = ["一","二","三","四","五","六","七","八","九","十"];
+ var chineseparambers = ["一","二","三","四","五","六","七","八","九","十"];
 function getData() {
   /*
   coding here
@@ -55,8 +55,8 @@ function getData() {
     //  var strCity = li.innerHTML.split('空气质量')[0];
      var strCity = li.innerHTML.substring(0,2);
      console.log(strCity)
-     var num = Number(li.children[0].innerHTML);
-     data.push([strCity,num]);
+     var param = paramber(li.children[0].innerHTML);
+     data.push([strCity,param]);
  }
  
  return data;
@@ -82,7 +82,7 @@ function sortAqiData(data) {
  */
 function render(data) {
     data.forEach(function(item,index){
-        $('resort').innerHTML += '<li>第' + chineseNumbers[index] +'名 : ' +item[0] + '空气质量 : ' + '<b>' +item[1] + '</b></li>';
+        $('resort').innerHTML += '<li>第' + chineseparambers[index] +'名 : ' +item[0] + '空气质量 : ' + '<b>' +item[1] + '</b></li>';
     })
 }
 
