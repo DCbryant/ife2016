@@ -25,36 +25,48 @@
     </style>
 </head>
 <body>
-    <textarea rows="10" cols="50">123456789</textarea>
+    <textarea rows="10" cols="50"></textarea>
     <input type="text">
     <input type="button" value="查询">
     <div id="container">
         <!--<div class="create"><span class="choose">200</span></div>-->
     <script>
         var textarea = document.getElementsByTagName('textarea')[0];
+        var container = document.getElementById('container');
         var input = document.getElementsByTagName('input');
         var text = input[0];
         var btn = input[1];
         var arr = [];
-        btn.onclick = function(){
-            var textValue = text.value;
-            var match = textarea.innerHTML.indexOf(textValue);
-            if(match<0){
-                return;
-            }else{
-                render(textValue);
-            }
-        };
-        
-        function render(str){
-            textarea.innerHTML = arr.map(function(currentValue,index,arr){
-                var data;
-                if(str.length>0 && str != null){
-                    data = data.replace(new RegExp(str, "g"),"<span class='choose'>" + str + "</span>")
-                }
-                return "<div>" + data + "</div>";
-            }).join('');
+        //返回textarea格式化字符串的数组
+        function filterValue(value) {
+            var reg = /[^a-zA-Z0-9\u4e00-\u9fa5]+/g;
+            value = value.replace(reg, " ");
+            var arr = [];
+            arr = value.split(' ');
+            return arr;
         }
+        btn.onclick = function () {
+            var str = text.value.trim();
+            var arrs = filterValue(textarea.value);
+            for(var i=0;i<arrs.length;i++){
+                if(arrs[i].indexOf(str.value)>-1){
+                    var a = arr.push(arrs[i]);
+                    return a;
+                }
+            }
+            render(str,a);
+        }
+           
+      
+
+       function render(str,arr) {
+        container.innerHTML = arr.map(function(d) {
+            if (str != null && str.length > 0) {
+                d = d.replace(new RegExp(str, "g"), "<span class='select'>" + str + "</span>");
+            }
+            return '<div>' + d + '</div>';
+        }).join('');
+      }
     </script>
 </body>
 </html>
