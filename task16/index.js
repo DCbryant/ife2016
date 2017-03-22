@@ -9,7 +9,6 @@ var queue = {
             return ('<div class="item">' + currentValue + '</div>');
            
          },this.arr).join('');
-          addDivDelEvent();
      },
     leftIn:function (param) { 
         this.arr.unshift(param);
@@ -41,19 +40,10 @@ var queue = {
              
          }
       },
-      delete:function(param){
-          this.arr.splice(param,1);
-          this.painted();
-      }  
+    
+  
 };
 
-function addDivDelEvent(){
-    for(var i=0;i<$('container').childNodes.length;i++){
-        $('container').childNodes[i].onclick = (function(){
-            return function(i){return queue.delete(i)};
-        }(i));
-    }
-}
 
 var $ = function (id) { 
     return document.getElementById(id);

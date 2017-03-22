@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            align-items: flex-end;
+        }
+        .item{
+            width: 20px;
+            text-align: center;
+            background: red;
+            color:aliceblue;
+            float: left;
+            margin: 5px 2px;
+            cursor: pointer;
+            margin-top: 200px;
+        }
+        input:nth-child(3){
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="text">
+    <input type="button" value="左侧入">
+    <input type="button" value="右侧入">
+    <input type="button" value="左侧出">
+    <input type="button" value="右侧出">
+    <input type="button" value="bubble">
+    <input type="button" value="select">
+    <input type="button" value="insert">
+    <div id="container">
+       <div class = "item">10</div>
+       <div class = "item">20</div>
+       <div class = "item">30</div>
+       <div class = "item">40</div>
+       <div class = "item">50</div>
+    </div>
+    <script src="index.js">
+        
+    </script>
+        
+    
+</body>
+</html>

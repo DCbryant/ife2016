@@ -33,7 +33,7 @@
     padding: 10px;
 }
 /*屏幕大于769px的时候应用*/
-@media screen and (min-width:768px){
+@media text and (min-width:768px){
     .col-sm-1{
         width: 8.333333333%;
     }
@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (max-width:768px){
+@media text and (max-width:768px){
     .col-xs-2{
         width: 16.666666666%;
     }
